@@ -298,10 +298,10 @@ li {
     width: calc(100% / 3);
   }
 }
-.find-image > img {
-  max-height: 150px;
+.find-image {
+  height: 150px;
   @media screen and (max-width: 599.98px) {
-    max-height: 89px;
+    height: 89px;
   }
 }
 
