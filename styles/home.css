@@ -287,19 +287,28 @@ li {
   margin-top: 60px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 80px;
   @media screen and (max-width: 599.98px) {
-    gap: 16px;
     grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
   }
 }
 .find-item {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 24px;
+  height: 200px;
+  @media screen and (max-width: 599.98px) {
+    height: 180px;
+  }
 }
-.find-image > img {
-  max-height: 200px;
+.find-image img {
+  max-height: 150px;
+  @media screen and (max-width: 599.98px) {
+    max-height: 100px;
+  }
 }
 .find-content {
   font-size: 26px;
