@@ -327,11 +327,12 @@ textarea {
 }
 .header-menu-mobile {
   display: none;
+  transform: scale(0.8);
   opacity: 0;
   visibility: hidden;
-  transition: all 0.2s ease;
-  padding-left: 10px;
-  padding-top: 20px;
+  transition: all 0.3s ease;
+  padding-left: 80px;
+  padding-top: 100px;
   position: fixed;
   top: 0;
   left: 0;
@@ -343,10 +344,19 @@ textarea {
   z-index: 9999;
   flex-direction: column;
   gap: 32px;
+
   font-size: 18px;
   @media screen and (max-width: 991.98px) {
     display: flex;
+    transform: scale(1);
   }
+}
+
+.header-menu-mobile.active {
+  padding-left: 10px;
+  padding-top: 20px;
+  opacity: 1;
+  visibility: visible;
 }
 .header-action {
   display: none;
@@ -373,11 +383,6 @@ textarea {
   @media screen and (max-width: 991.98px) {
     display: flex;
   }
-}
-
-.header-menu-mobile.active {
-  opacity: 1;
-  visibility: visible;
 }
 
 .header-wrapper {
