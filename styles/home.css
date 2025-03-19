@@ -66,12 +66,14 @@ li {
 .root {
   overflow: hidden;
 }
+
 .header-wrapper {
   padding-block: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .header-logo img {
   width: 180px;
   height: auto;
@@ -299,7 +301,7 @@ li {
 .find-image > img {
   max-height: 150px;
   @media screen and (max-width: 599.98px) {
-    max-height: 100px;
+    max-height: 89px;
   }
 }
 
@@ -656,9 +658,6 @@ li {
     gap: 40px;
     padding-block: 40px;
   }
-}
-
-.review__image {
 }
 
 .review__image img {

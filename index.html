@@ -42,8 +42,9 @@
         </li>
       </ul>
       <section class="main">
-        <video class="video-bg" autoplay muted loop>
+        <video class="video-bg" autoplay muted loop playsinline>
           <source src="./assets/videos/video-hero.mp4" type="video/mp4" />
+          <source src="./assets/videos/video-hero.webm" type="video/webm" />
           Your browser does not support the video tag.
         </video>
         <div class="">
@@ -405,6 +406,18 @@
         document
           .querySelector(".header-menu-mobile")
           .classList.remove("active");
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        const video = document.querySelector(".video-bg");
+
+        video.play().catch((error) => {
+          console.log(
+            "Autoplay bị chặn trên mobile, thử kích hoạt lại...",
+            error
+          );
+          video.muted = true;
+          video.play();
+        });
       });
     </script>
   </body>
