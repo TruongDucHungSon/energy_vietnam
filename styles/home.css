@@ -294,7 +294,7 @@ li {
   gap: 24px;
 }
 .find-image {
-  max-height: 200px;
+  height: 260px;
 }
 
 .find-content {
