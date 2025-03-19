@@ -293,9 +293,11 @@ li {
   align-items: center;
   gap: 24px;
 }
-.find-image > img {
-  max-width: 240px;
-  max-height: 190px;
+.find-image {
+  max-height: 200px;
+  @media screen and (max-width: 599.98px) {
+    max-height: 100px;
+  }
 }
 
 .find-content {
