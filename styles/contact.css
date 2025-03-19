@@ -310,7 +310,7 @@ textarea {
 }
 .follow-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   gap: 12px;
   flex-wrap: wrap;
 }

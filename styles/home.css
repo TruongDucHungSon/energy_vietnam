@@ -111,6 +111,7 @@ li {
 }
 .header-menu-mobile {
   display: none;
+  transform: scale(0.8);
   opacity: 0;
   visibility: hidden;
   transition: all 0.2s ease;
@@ -127,9 +128,11 @@ li {
   z-index: 9999;
   flex-direction: column;
   gap: 32px;
+
   font-size: 18px;
   @media screen and (max-width: 991.98px) {
     display: flex;
+    transform: scale(1);
   }
 }
 
@@ -477,8 +480,8 @@ li {
   @media screen and (max-width: 767.98px) {
     flex-wrap: wrap;
   }
-  .item {
-    height: 70px;
+  .item > img {
+    max-width: 100px;
   }
 }
 
@@ -655,7 +658,6 @@ li {
   }
 }
 
-/* Hình ảnh */
 .review__image {
 }
 
@@ -663,15 +665,11 @@ li {
   border-radius: 10px;
 }
 
-/* Nội dung review */
-
-/* Sao đánh giá */
 .review__stars {
   width: 141px;
   height: 25px;
 }
 
-/* Nội dung văn bản */
 .review__text {
   font-size: 25px;
   color: #d24d40;
@@ -684,14 +682,12 @@ li {
   }
 }
 
-/* Tên khách hàng */
 .review__author {
   font-size: 16px;
   letter-spacing: 2px;
   color: #d24d40;
 }
 
-/* follow */
 .follow {
   background: #d14b3f;
 }
@@ -723,7 +719,7 @@ li {
     height: 170px;
   }
   @media screen and (max-width: 599.98px) {
-    height: 140px;
+    height: 80px;
   }
 }
 
