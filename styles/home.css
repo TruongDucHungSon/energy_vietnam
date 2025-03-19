@@ -299,7 +299,7 @@ li {
   gap: 24px;
 }
 .find-image > img {
-  max-height: 180px;
+  max-height: 200px;
 }
 .find-content {
   font-size: 26px;
