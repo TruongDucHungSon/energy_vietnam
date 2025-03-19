@@ -302,10 +302,7 @@ li {
   height: 250px;
 }
 .find-image img {
-  max-height: 150px;
-  @media screen and (max-width: 599.98px) {
-    max-height: 100px;
-  }
+  max-height: 200px;
 }
 .find-content {
   font-size: 26px;
