@@ -299,10 +299,7 @@ li {
   justify-content: center;
   align-items: center;
   gap: 24px;
-  height: 200px;
-  @media screen and (max-width: 599.98px) {
-    height: 180px;
-  }
+  height: 250px;
 }
 .find-image img {
   max-height: 150px;
