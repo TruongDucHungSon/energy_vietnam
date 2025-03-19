@@ -294,7 +294,10 @@ li {
   gap: 24px;
 }
 .find-image {
-  height: 260px;
+  max-height: 200px;
+  @media screen and (max-width: 540.98px) {
+    max-height: 120px;
+  }
 }
 
 .find-content {
