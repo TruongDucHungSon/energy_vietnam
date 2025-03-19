@@ -287,10 +287,9 @@ li {
   margin-top: 60px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
   @media screen and (max-width: 599.98px) {
-    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 .find-item {
@@ -299,13 +298,9 @@ li {
   align-items: center;
   gap: 24px;
 }
-.find-image {
-  max-height: 200px;
-  @media screen and (max-width: 540.98px) {
-    max-height: 120px;
-  }
+.find-image > img {
+  max-height: 150px;
 }
-
 .find-content {
   font-size: 26px;
   font-weight: 700;
