@@ -9,13 +9,45 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
     />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </head>
   <body>
+    <!-- header menu-mobile -->
+    <ul class="header-menu-mobile">
+      <div class="header-action">
+        <ion-icon name="close-outline" id="close" class="close"></ion-icon>
+      </div>
+      <li class="header-menu-item">
+        <a href="#" class="header-menu-link">OUR RANGE</a>
+      </li>
+      <li class="header-menu-item">
+        <a href="#" class="header-menu-link">ABOUT US</a>
+      </li>
+      <li class="header-menu-item">
+        <a href="#" class="header-menu-link">SUSTAINABILITY</a>
+      </li>
+      <li class="header-menu-item">
+        <a href="#" class="header-menu-link">OUR RANGE</a>
+      </li>
+      <li class="header-menu-item">
+        <a href="./contact.html" class="header-menu-link">CONTACT US</a>
+      </li>
+    </ul>
     <header class="header-wrapper container" data-aos="fade-down">
       <div class="header-logo">
         <a href="./index.html">
           <img src="./assets/images/logo/logo.png" alt="logo" />
         </a>
+      </div>
+      <div class="menu-toggle" id="menu-toggle">
+        <ion-icon name="reorder-two-outline"></ion-icon>
       </div>
       <ul class="header-menu">
         <li class="header-menu-item">
@@ -154,6 +186,16 @@
       AOS.init({
         duration: 1000,
         once: true,
+      });
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          document.querySelector(".header-menu-mobile").classList.add("active");
+        });
+      document.getElementById("close").addEventListener("click", function () {
+        document
+          .querySelector(".header-menu-mobile")
+          .classList.remove("active");
       });
     </script>
   </body>
