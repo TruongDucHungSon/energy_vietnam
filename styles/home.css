@@ -295,9 +295,6 @@ li {
 }
 .find-image {
   height: 150px;
-  @media screen and (max-width: 599.98px) {
-    height: 89px;
-  }
 }
 
 .find-content {
