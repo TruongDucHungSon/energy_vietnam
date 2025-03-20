@@ -17,9 +17,53 @@
     ></script>
     <link rel="stylesheet" href="./styles/home.css" />
     <title>HOME</title>
+
+    <style>
+      .header-headroom {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 199999;
+        transform: translateY(-100%);
+        opacity: 0;
+        transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out;
+        will-change: transform, opacity;
+      }
+
+      .header-headroom.pinned {
+        transform: translateY(0);
+        opacity: 1;
+        background: transparent;
+        transition: transform 0.4s ease-out, opacity 0.3s ease-out;
+      }
+
+      .header-headroom.visible {
+        background-color: white;
+        transform: translateY(0);
+        opacity: 1;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .header-headroom.hidden {
+        transform: translateY(-100%);
+        opacity: 0;
+        transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out;
+      }
+
+      .header-headroom.visible .header-menu-link {
+        color: #d14b3f;
+      }
+
+      .header-headroom.visible .header-menu-link-last-child {
+        color: white;
+      }
+    </style>
   </head>
   <body>
     <main class="root">
+      <!-- header fixed -->
+
       <!-- header menu-mobile -->
       <ul class="header-menu-mobile">
         <div class="header-action">
@@ -47,7 +91,7 @@
           <source src="./assets/videos/video-hero.webm" type="video/webm" />
           Your browser does not support the video tag.
         </video>
-        <div class="">
+        <div class="header-headroom">
           <header class="header-wrapper container" data-aos="fade-down">
             <div class="header-logo">
               <a href="./index.html">
@@ -391,6 +435,8 @@
       </footer>
       <!-- Footer end -->
     </main>
+
+    <script src="./js/index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
       AOS.init({
